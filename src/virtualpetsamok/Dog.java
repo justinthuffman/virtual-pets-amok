@@ -7,12 +7,12 @@ public abstract class Dog extends VirtualPet {
 	}
 
 	public void walk() {
-		petHappiness += 5;
+		setPetHappiness(getPetHappiness() + 5);
 	}
 
 	@Override
 	public void tick() {
-		petHappiness -= 1;
+		setPetHappiness(getPetHappiness() - 1);
 	}
 
 }

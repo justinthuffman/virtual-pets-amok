@@ -6,22 +6,30 @@ public class RoboDog extends Dog implements RoboPet {
 
 	public RoboDog(String name, int happiness, int health, int maintenance) {
 		super(name, happiness, health);
-		this.maintenance = maintenance;
+		this.setMaintenance(maintenance);
 
 	}
 
 	@Override
 	public void tick() {
-		petHappiness -= 1;
-		maintenance -= 1;
+		setPetHappiness(getPetHappiness() - 1);
+		setMaintenance(getMaintenance() - 1);
 
-		if (maintenance <= 0 || petHappiness <= 0) {
-			petHealth -= 1;
+		if (getMaintenance() <= 0 || getPetHappiness() <= 0) {
+			setPetHealth(getPetHealth() - 1);
 		}
 	}
 
 	public void oil() {
-		maintenance += 5;
+		setMaintenance(getMaintenance() + 5);
+	}
+
+	public int getMaintenance() {
+		return maintenance;
+	}
+
+	public void setMaintenance(int maintenance) {
+		this.maintenance = maintenance;
 	}
 
 }

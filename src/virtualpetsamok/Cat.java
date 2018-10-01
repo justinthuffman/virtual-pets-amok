@@ -8,7 +8,7 @@ public class Cat extends VirtualPet {
 
 	@Override
 	public void tick() {
-		petHappiness -= 1;
+		setPetHappiness(getPetHappiness() - 1);
 	}
 
 }
