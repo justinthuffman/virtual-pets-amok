@@ -133,7 +133,7 @@ public class VirtualPetTest {
 		// act
 		underTest.feed();
 		// assert
-		assertEquals("Should be 0 having subtracted 5", 0, underTest.hunger, .5);
+		assertEquals("Should be 0 having subtracted 5", 0, underTest.getHunger(), .5);
 	}
 
 	@Test
@@ -143,7 +143,7 @@ public class VirtualPetTest {
 		// act
 		underTest.water();
 		// assert
-		assertEquals("Should be 0 having subtracted 5", 0, underTest.thirst, .5);
+		assertEquals("Should be 0 having subtracted 5", 0, underTest.getThirst(), .5);
 	}
 
 	@Test
@@ -153,7 +153,7 @@ public class VirtualPetTest {
 		// act
 		underTest.walk();
 		// assert
-		assertEquals("Should be 0 having subtracted 5", 0, underTest.waste, .5);
+		assertEquals("Should be 0 having subtracted 5", 0, underTest.getWaste(), .5);
 	}
 
 	@Test
@@ -163,7 +163,7 @@ public class VirtualPetTest {
 		// act
 		underTest.cleanCages();
 		// assert
-		assertEquals("Should be 0 having subtracted 5", 0, underTest.waste, .5);
+		assertEquals("Should be 0 having subtracted 5", 0, underTest.getWaste(), .5);
 	}
 
 	@Test
@@ -173,7 +173,7 @@ public class VirtualPetTest {
 		// act
 		underTest.oil();
 		// assert
-		assertEquals("Should be 5 having added 5 to 0", 0, underTest.maintenance, .5);
+		assertEquals("Should be 5 having added 5 to 0", 0, underTest.getMaintenance(), .5);
 	}
 
 	@Test
@@ -203,7 +203,7 @@ public class VirtualPetTest {
 		// act
 		underTest.feed();
 		// assert
-		assertEquals("Should be 0 having subtracted 5", 0, underTest.hunger, .5);
+		assertEquals("Should be 0 having subtracted 5", 0, underTest.getHunger(), .5);
 	}
 
 	@Test
@@ -213,7 +213,7 @@ public class VirtualPetTest {
 		// act
 		underTest.water();
 		// assert
-		assertEquals("Should be 0 having subtracted 5", 0, underTest.thirst, .5);
+		assertEquals("Should be 0 having subtracted 5", 0, underTest.getThirst(), .5);
 	}
 
 	@Test
@@ -223,7 +223,7 @@ public class VirtualPetTest {
 		// act
 		underTest.emptyLitterBox();
 		// assert
-		assertEquals("Should be 0 having subtracted 5", 0, underTest.waste, .5);
+		assertEquals("Should be 0 having subtracted 5", 0, underTest.getWaste(), .5);
 	}
 
 	@Test
@@ -233,7 +233,7 @@ public class VirtualPetTest {
 		// act
 		underTest.oil();
 		// assert
-		assertEquals("Should be 5 having added 5 to 0", 0, underTest.maintenance, .5);
+		assertEquals("Should be 5 having added 5 to 0", 0, underTest.getMaintenance(), .5);
 	}
 
 	@Test
